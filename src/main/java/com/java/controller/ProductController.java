@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -80,7 +79,7 @@ public class ProductController {
 
     @PutMapping("/updateProduct")
     public ResponseEntity<Product> updateProduct(@RequestBody Product product) {
-        if (false) { //product.getId() == null
+        if (false) {
             return ResponseEntity.badRequest().build();  // Return 400 if product ID is missing
         }
 
